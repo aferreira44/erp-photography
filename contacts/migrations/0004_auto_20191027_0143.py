@@ -12,12 +12,16 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AlterModelOptions(
             name='client',
-            options={'verbose_name': 'Cliente', 'verbose_name_plural': 'Clientes'},
+            options={
+                'verbose_name': 'Cliente',
+                'verbose_name_plural': 'Clientes'
+            },
         ),
         migrations.AlterField(
             model_name='client',
             name='first_name',
-            field=models.CharField(max_length=200, verbose_name='Primeiro Nome'),
+            field=models.CharField(max_length=200,
+                                   verbose_name='Primeiro Nome'),
         ),
         migrations.AlterField(
             model_name='client',
@@ -27,6 +31,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='client',
             name='middle_name',
-            field=models.CharField(max_length=200, verbose_name='Nome do meio'),
+            field=models.CharField(max_length=200,
+                                   verbose_name='Nome do meio'),
         ),
     ]

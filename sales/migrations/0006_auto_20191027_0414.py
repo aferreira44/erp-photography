@@ -13,9 +13,18 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Product',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=200, verbose_name='Nome')),
-                ('description', models.CharField(blank=True, max_length=200, null=True, verbose_name='Descrição')),
+                ('id',
+                 models.AutoField(auto_created=True,
+                                  primary_key=True,
+                                  serialize=False,
+                                  verbose_name='ID')),
+                ('name', models.CharField(max_length=200,
+                                          verbose_name='Nome')),
+                ('description',
+                 models.CharField(blank=True,
+                                  max_length=200,
+                                  null=True,
+                                  verbose_name='Descrição')),
                 ('price', models.FloatField()),
             ],
             options={
@@ -26,11 +35,13 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='invoice',
             name='services',
-            field=models.ManyToManyField(to='sales.Service', verbose_name='Serviços'),
+            field=models.ManyToManyField(to='sales.Service',
+                                         verbose_name='Serviços'),
         ),
         migrations.AddField(
             model_name='invoice',
             name='products',
-            field=models.ManyToManyField(to='sales.Product', verbose_name='Produtos'),
+            field=models.ManyToManyField(to='sales.Product',
+                                         verbose_name='Produtos'),
         ),
     ]

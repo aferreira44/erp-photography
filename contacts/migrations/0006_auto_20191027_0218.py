@@ -13,13 +13,16 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='client',
             name='cpf',
-            field=models.CharField(default=0, max_length=11, verbose_name='CPF'),
+            field=models.CharField(default=0,
+                                   max_length=11,
+                                   verbose_name='CPF'),
             preserve_default=False,
         ),
         migrations.AddField(
             model_name='client',
             name='rg',
-            field=models.CharField(default=0, max_length=14, verbose_name='RG'),
+            field=models.CharField(default=0, max_length=14,
+                                   verbose_name='RG'),
             preserve_default=False,
         ),
     ]

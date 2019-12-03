@@ -13,9 +13,18 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Invoice',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=200, verbose_name='Nome')),
-                ('description', models.CharField(blank=True, max_length=200, null=True, verbose_name='Descrição')),
+                ('id',
+                 models.AutoField(auto_created=True,
+                                  primary_key=True,
+                                  serialize=False,
+                                  verbose_name='ID')),
+                ('name', models.CharField(max_length=200,
+                                          verbose_name='Nome')),
+                ('description',
+                 models.CharField(blank=True,
+                                  max_length=200,
+                                  null=True,
+                                  verbose_name='Descrição')),
             ],
             options={
                 'verbose_name': 'Fatura',
@@ -25,6 +34,9 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='service',
             name='description',
-            field=models.CharField(blank=True, max_length=200, null=True, verbose_name='Descrição'),
+            field=models.CharField(blank=True,
+                                   max_length=200,
+                                   null=True,
+                                   verbose_name='Descrição'),
         ),
     ]

@@ -13,6 +13,13 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='invoice',
             name='status',
-            field=models.CharField(choices=[('PENDING', 'Pendente'), ('PAID', 'Paga'), ('CANCELED', 'Cancelada'), ('DRAFT', 'Rascunho'), ('PARTIALLY_PAID', 'Parcialmente Paga')], default=('PENDING', 'Pendente'), max_length=50),
+            field=models.CharField(choices=[('PENDING', 'Pendente'),
+                                            ('PAID', 'Paga'),
+                                            ('CANCELED', 'Cancelada'),
+                                            ('DRAFT', 'Rascunho'),
+                                            ('PARTIALLY_PAID',
+                                             'Parcialmente Paga')],
+                                   default=('PENDING', 'Pendente'),
+                                   max_length=50),
         ),
     ]

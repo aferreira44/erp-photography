@@ -13,6 +13,9 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='client',
             name='middle_name',
-            field=models.CharField(blank=True, max_length=200, null=True, verbose_name='Nome do meio'),
+            field=models.CharField(blank=True,
+                                   max_length=200,
+                                   null=True,
+                                   verbose_name='Nome do meio'),
         ),
     ]
